@@ -6,6 +6,7 @@ const initialState = {
 function Reducer(state = initialState, { type, payload }) {
     switch (type) {
         case "FETCH_STOCK":
+            console.log(payload, 'month reducer');
             return { ...state, dataStock: payload }
         case 'SET_LOADING':
             return { ...state, isLoading: payload }
@@ -14,5 +15,6 @@ function Reducer(state = initialState, { type, payload }) {
             return state;
     }
 }
-console.log(initialState);
+// console.log(initialState);
+
 export default Reducer
